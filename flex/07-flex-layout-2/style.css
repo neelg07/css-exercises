@@ -97,3 +97,7 @@ a {
   align-items: flex-start;
   row-gap: 20px;
 }
+
+.break {
+  flex: 1 1 100%;
+}
