@@ -38,7 +38,7 @@ body, html {
 }
 
 .article p {
-  font-size: 18px;
+  font-size: 17px;
   font-family: sans-serif;
   color: white;
   text-align: left;
@@ -47,4 +47,36 @@ body, html {
 .footer {
   background-color: #393f4d;
   grid-column: 1 / 3;
+}
+
+/* My Answers */ 
+
+.container {
+  display: grid;
+  grid-template: 1fr 1fr 5fr 1fr / 1fr 3fr;
+  gap: 15px;
+  grid-template-areas: "header header"
+                       "sidebar nav"
+                       "sidebar article"
+                       "footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.article {
+  grid-area: article;
+}
+
+.footer {
+  grid-area: footer;
 }
