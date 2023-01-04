@@ -89,3 +89,80 @@
   font-size: 13px;
   font-weight: normal;  
 }
+
+/* My Answer */
+
+.container {
+  display: grid;
+  grid-template: 100px 50px 1fr 50px / 1fr 4fr;
+  gap: 4px;
+}
+
+.header {
+  grid-area: 1 / 1 / 2 / 3;
+  
+  display: grid;
+  grid-template: 1fr / 1fr 4fr;
+  align-items: center;
+}
+
+.logo {
+  justify-self: center;
+}
+
+.sidebar {
+  grid-area: 2 / 1 / 4 / 2;
+}
+
+.nav {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.footer {
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+/* Header list */
+.menu > ul {
+  display: grid;
+  grid-template: 1fr / 0.5fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+}
+
+.menu > ul li:nth-child(1) {
+  grid-column: 2;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Nav list */
+.nav > ul {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+}
+
+/* Sidebar */
+.sidebar {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr;
+  gap: 50px;
+}
+
+.sidebar > div {
+  display: grid;
+  place-items: center;
+}
+
+/* Article */
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.article .card {
+  height: 200px;
+}
